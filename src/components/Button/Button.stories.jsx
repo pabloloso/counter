@@ -9,7 +9,13 @@ export default {
 
 const Template = (args) => <Button {...args} />
 
-export const Default = Template.bind({})
-Default.args = {
-  label: 'Button'
+export const primaryButton = Template.bind({})
+primaryButton.args = {
+  label: 'Primary button'
+}
+
+export const secondaryButton = Template.bind({})
+secondaryButton.args = {
+  label: 'Secondary button',
+  isPrimaryButton: false
 }

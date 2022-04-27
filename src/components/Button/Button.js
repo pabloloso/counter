@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 
 import { StyledButton } from './Button.styles'
 
-const Button = ({ label, onClick, buttonType = 'primary' }) => {
+const Button = ({ label, onClick, isPrimaryButton = true }) => {
   return (
-    <StyledButton buttonType={buttonType} onClick={onClick}>
+    <StyledButton isPrimaryButton={isPrimaryButton} onClick={onClick}>
       {label}
     </StyledButton>
   )
@@ -14,7 +14,7 @@ const Button = ({ label, onClick, buttonType = 'primary' }) => {
 Button.propTypes = {
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  buttonType: PropTypes.string
+  isPrimaryButton: PropTypes.bool
 }
 
 export default Button
